@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(219, 233, 241);
+}
+
+h1{
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+
+.top{
+    height: 200px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+#saida{
+    height: 150px;
+    width: auto ;
+    background-color: rgb(200, 220, 250);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}

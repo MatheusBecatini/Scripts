@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verifica se é estrangeiro</title>
+
+
+    <style>
+        .table {
+            font-size: 20px;
+            background-color: beige;
+            height: 100px;
+            width: 30%;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Como fazer para pegar valores do HTML e passar para o JS, e usar o JS para apresentar conteúdo HTML</p>
+
+    <div class="table">
+        <label>Você é de qual país? <br> </label>
+        <input id="in" type="text">
+        <button onclick="limpa(), verifica()" >ok</button>
+
+    </div>
+
+    <div id="es" class="table">
+
+    </div>
+
+    <script>
+
+        var t = window.document.querySelector('input#in')
+
+        const res = window.document.querySelector('div#es')
+
+
+        function verifica() {
+            if (t.value == 'brasil' || t.value == 'Brasil')
+                res.innerHTML += `Brasileiro `
+            else
+                res.innerHTML += `Estrangeiro`
+        }
+
+        function limpa() { 
+            res.innerHTML = " "
+         }
+
+
+    </script>
+
+</body>
+
+</html>
