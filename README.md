@@ -3,9 +3,3 @@
 
 ## Dia da Semana 
     Recebe uma data e retorna o dia da semana em portugues.
-
-## Sintaxe JQuery
-    Maneira de declarar funções com o jquery.
-
-## Interacao JS_HTML
-    Usando funções como getElementById, e inserindo HTML através do Java Script.
