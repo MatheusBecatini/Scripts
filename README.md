@@ -7,7 +7,7 @@ Recebe uma data e retorna o dia da semana em portugues.
 
 ## JavaScript
 #### Desafio 1 
-* for 
-* indexOf
-* for of
-* array.join
+    * for 
+    * indexOf
+    * for of
+    * array.join
