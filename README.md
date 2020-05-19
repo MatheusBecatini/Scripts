@@ -6,7 +6,7 @@ Sisteminha basico que calcula qual pet shop mais barato, levando em considera√ß√
 Recebe uma data e retorna o dia da semana em portugues.
 
 ## JavaScript
-### Desafio 1 
+#### Desafio 1 
 * for 
 * indexOf
 * for of
