@@ -10,4 +10,4 @@ Recebe uma data e retorna o dia da semana em portugues.
 * for 
 * indexOf
 * for of
-* array.join
+* array.join    
