@@ -1,9 +1,3 @@
-## JavaScript
-#### Script 1 
-* for 
-* indexOf
-* for of
-* array.join    
 
 ## Python
 ### Dog's
@@ -11,3 +5,13 @@ Sisteminha basico que calcula qual pet shop mais barato, levando em consideraç�
 
 ### Dia da Semana 
 Recebe uma data e retorna o dia da semana em portugues.
+
+## JavaScript
+#### Desafio 1 
+* for 
+* indexOf
+* for of
+* array.join    
+#### Desafio 2 
+* Criando Lista no HTML partindo de um vetor 
+* Recebendo novos elementos do usuário 

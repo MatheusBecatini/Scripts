@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+</head>
+<body>
+
+    <div class="box" >
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+
+       
+    </div>
+
+
+
+
+    <script>
+        const box = document.querySelector('.box')
+
+
+        //Desafio 3 
+        const list = document.createElement('ul')
+        let nomes = ["Diego", "Gabriel", "Lucas"];
+        for (nome of nomes){
+            const el = document.createElement('li')
+            const text = document.createTextNode(nome)
+            el.appendChild(text)
+            list.appendChild(el)
+        }
+        box.appendChild(list)
+
+        //Desafio 4
+        const entrada = document.querySelector('input[name=nome]')
+
+        const adicionar = () => {
+            const el = document.createElement('li')
+            const text = document.createTextNode(entrada.value)
+            el.appendChild(text)
+            list.appendChild(el)
+            box.appendChild(list)
+        }
+        
+
+
+
+    </script>
+</body>
+</html>
