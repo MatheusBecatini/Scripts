@@ -1,29 +1,25 @@
+//Selecionando Div principal
 const div = document.querySelector('#main')
 
-let todos = JSON.parse(localStorage.getItem('Lista_Todos')) || []
+//Recebe dados do local Storage ou Inicia com uma lista de modelo
+let todos = JSON.parse(localStorage.getItem('Lista_Todos')) || ['Tarefa de Exemplo']
 
 const lista = document.createElement('ul')
-
-
 const renderizar = () => {
     lista.innerHTML = ''
     for (todo of todos){
-        let iten = document.createElement('li')
-        iten.appendChild(document.createTextNode(todo))
+        let item = document.createElement('li')
+        item.appendChild(document.createTextNode(todo))
         let excluir = document.createElement('a')
-        let text = document.createTextNode('   deletar')
-        excluir.appendChild(text)
+        excluir.appendChild(document.createTextNode('   apagar'))
         excluir.setAttribute('href', '#')
         excluir.setAttribute('class', 'text-danger')
-        let pos = todos.indexOf(todo)
-        excluir.setAttribute('onclick', `excluir(${pos})`)
-        iten.appendChild(excluir)
-        lista.appendChild(iten)
-        
+        let position = todos.indexOf(todo)
+        excluir.setAttribute('onclick', `excluir(${position})`)
+        item.appendChild(excluir)
+        lista.appendChild(item)
     }
 }
-
-renderizar()
 
 const adicionar = () => {
     todos.push(entrada.value)
@@ -33,21 +29,26 @@ const adicionar = () => {
 }
 
 const excluir = pos => {
-    todos.splice(pos, 1)
+    todos.splice(pos, 1) //Apaga 1 item a partir da posição indicada
     renderizar()
     save()
 }
 
 const save = () => {
     localStorage.setItem('Lista_Todos', JSON.stringify(todos))
+    //setItem ('chave', 'valor')
 }
 
+//Fluxo da página
+renderizar()
 const entrada =  document.createElement('input')
+    entrada.setAttribute('style', 'margin-left: 10px; margin-right: 10px')
 const btn =  document.createElement('button')
-btn.setAttribute('class', 'btn btn-secondary btn-sm')
-btn.setAttribute('onclick', 'adicionar()')
-btn.appendChild(document.createTextNode('Add'))
+    btn.setAttribute('class', 'btn btn-secondary btn-sm')
+    btn.setAttribute('onclick', 'adicionar()')
+    btn.appendChild(document.createTextNode('Add'))
 
+//Estrutura da página
 div.appendChild(lista)
 div.appendChild(entrada)
 div.appendChild(btn)
