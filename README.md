@@ -9,7 +9,7 @@ Recebe uma data e retorna o dia da semana em portugues.
 #### Todo Basic
 * Manipulando DOM 
 * Criando HTML só com JS 
-* Usando o Slipe() em um array
+* Usando o splice() em um array
 * Salvando no LocalStorage
 * Recebendo dados do LocalStorage
 #### Desafio 1 
