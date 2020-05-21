@@ -20,3 +20,7 @@ Recebe uma data e retorna o dia da semana em portugues.
 #### Desafio 2 
 * Criando Lista no HTML partindo de um vetor 
 * Recebendo novos elementos do usuário 
+#### Desafio 3 
+* Fazendo requisições com o axios
+* Consumindo dados da API do GitHub 
+* Usando basicamente tudo dos outros desafios
