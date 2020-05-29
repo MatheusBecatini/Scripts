@@ -15,16 +15,16 @@ class App {
     render(){
         this.form.onsubmit = event => this.addRepo(event)
     }
-
+    
     async addRepo(event){
         event.preventDefault();
+        this.setLoading()
 
         const texto = this.entrada.value;
 
         if (texto.length === 0)
             return
         
-        this.setLoading()
         try{
             const response = await api.get(`/repos/${texto}`)
             const {name, description, html_url, owner: { avatar_url }} = response.data
@@ -37,11 +37,12 @@ class App {
             })
     
             this.add()
-        }catch{
+        }catch (err){
             this.entrada.value = ''
             alert('Repositório inválido')
+            console.log(err)
         }
-        this.setLoading(true)
+        this.setLoading(false)
     }
 
     add(){
@@ -60,7 +61,9 @@ class App {
 
             let link = document.createElement('a')
             link.setAttribute('href', repo.html_url)
-            link.appendChild(document.createTextNode('Go'))
+            let btn = document.createElement('button')
+            btn.appendChild(document.createTextNode('Go to repo'))
+            link.appendChild(btn)
 
             let elemento = document.createElement('li')
             elemento.appendChild(img)
@@ -72,15 +75,20 @@ class App {
         })
     }
 
-    setLoading(load = false){
-        if (load === false){
-            let loading = document.getElementById('load')
+    setLoading(load = true){
+        if (load === true){
+            let loading = document.createElement('span')
+            loading.setAttribute('id', 'load')
             loading.appendChild(document.createTextNode('Carregando...'))
 
-            this.lista.appendChild(loading)
+            this.form.appendChild(loading)
         }
-        else
-            document.getElementById('load').remove();
+        else{
+            let loading = document.getElementById('load');
+            if (loading){
+                loading.remove();
+            }
+        }
     }
 }
 

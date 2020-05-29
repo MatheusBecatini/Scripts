@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ES6+</title>
+    <title>Get GitHub User's</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" id="formulario">
-        <input type="text" name="entrada" id="entrada">
-        <button type="submit">Buscar</button>
+    <h1>Get GitHub Users Repo's</h1>
+    <form id="formulario">
+        <input placeholder="user/repo_name" type="text" name="entrada" id="entrada">
+        <button type="submit">Get</button>
     </form>
 
+    <span id="load"></span>
     <ul id="lista">
-        <strong id="load"></strong>
     </ul>
-
-    
-    
 
     <script src="bundle.js"></script>
 </body>
