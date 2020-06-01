@@ -1,5 +1,5 @@
 {
-  "name": "Get_GitHub_Repos",
+  "name": "get-github-repos",
   "version": "1.0.0",
   "main": "index.html",
   "license": "MIT",
