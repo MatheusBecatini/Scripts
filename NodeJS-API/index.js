@@ -1,9 +1,19 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const requireDir = require('require-dir');
 
+//app init
 const app = express();
+app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Opa. Tudo certo ?')
+//DB init
+mongoose.connect('mongodb://localhost:27017/node-js-api', { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
 })
+requireDir('./src/Models')
+
+//Routes
+app.use('/api', require('./src/routes'))
 
 app.listen(8080)
