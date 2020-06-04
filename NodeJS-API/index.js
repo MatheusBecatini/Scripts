@@ -17,5 +17,4 @@ requireDir('./src/Models')
 
 //Routes
 app.use('/api', require('./src/routes'))
-
 app.listen(8080)

@@ -21,5 +21,4 @@ const ProductSchema = new mongoose.Schema({
 })
 
 mongoose.plugin(mongoosePaginate)
-
 mongoose.model('Product', ProductSchema)
