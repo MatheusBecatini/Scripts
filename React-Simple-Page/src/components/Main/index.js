@@ -1,3 +1,4 @@
 import Main from './view/Main'
+import Input from './view/Input'
 
-export default Main
+export { Main, Input }

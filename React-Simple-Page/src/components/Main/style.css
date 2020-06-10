@@ -22,10 +22,10 @@
 .repos_list article a {
     height: 42px;
     border-radius: 5px;
-    border: 2px solid #da552f;
+    border: 2px solid #3d1e6d  ;
     background: none;
     margin-top: 10px;
-    color: #da552f;
+    color: #1f1f1f;
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
@@ -36,6 +36,36 @@
 }
 
 .repos_list article a:hover {
-    background: #da552f;
+    background: #3d1e6d  ;
     color: white;
+}
+
+.repos_list button {
+    height: 42px;
+    padding: 5px;
+    float: right;
+    border-radius: 5px;
+    border: 0 solid;
+    background-color: #3d1e6d  ;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.repos_list button:hover {
+    background: #8874a3  ;
+    color: white;
+}
+.repos_list input {
+    height: 42px;
+    width: 80%;
+    border-radius: 5px;
+    border: 2px solid #3d1e6d  ;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    transition: all 0.2s;
 }
